@@ -1,0 +1,211 @@
+html, body {
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Lucida Handwriting', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.lasgidi-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: 100vh; 
+    padding: 50px;
+    background-image: url("images/sunsets in lagos.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff; 
+    text-shadow: 3px 3px 3px #000000;
+     background:
+        linear-gradient(#00000033, #00000066), /* top darker, bottom lighter */
+        url("images/sunsets in lagos.jpg") center/cover no-repeat;
+}
+@media (max-width: 900px) {
+    .lasgidi-section {
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .lasgidi-text h1 {
+        font-size: 2rem;
+    }
+
+    .lasgidi-text p {
+        font-size: 1.1rem;
+    }
+
+    .lasgidi-buttons {
+        flex-direction: column;
+    }
+}
+.lasgidi-nav {
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background-color: #000000cc; 
+    padding: 15px 50px;
+    z-index: 1000;
+    gap: 20px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.lasgidi-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+    margin: 0;
+    padding: 0;
+}
+
+.lasgidi-nav ul li {
+    margin-left: 60px;
+}
+
+.lasgidi-nav ul li:hover {
+    transform: scale(1.5); 
+}
+
+.lasgidi-nav ul li a {
+color: #fa5305d8; 
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 12px;
+}
+
+.lasgidi-nav ul li a:hover {
+    color: #ffcc00; 
+}
+@media (max-width: 768px) {
+    .lasgidi-nav {
+        padding: 15px 20px; /* smaller padding on mobile */
+    }
+
+    .lasgidi-nav ul {
+        flex-direction: column; /* stack items vertically */
+        align-items: flex-start; /* left align */
+    }
+
+    .lasgidi-nav ul li {
+        margin-left: 0; /* remove horizontal spacing */
+        margin-bottom: 10px; /* vertical spacing between items */
+    }
+
+    .lasgidi-nav ul li a {
+        font-size: 14px; /* slightly bigger for readability on small screens */
+    }
+}
+.lasgidi-section {
+    padding-top: 100px; 
+}
+.lasgidi-footer {
+    width: 100%;
+    background-color: #030303; 
+    text-align: left;
+}
+
+.lasgidi-footer .lasgidi-social a {
+    text-decoration: none;
+    color: #f5721b; 
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 12px;
+    margin: 0 15px;
+}
+
+.lasgidi-footer .lasgidi-social a:hover {
+    color: #ffcc00; 
+}
+.lasgidi-buttons {
+    display: flex;
+    gap: 20px; 
+}
+
+
+.lasgidi-buttons button {
+    font-family: 'Lucida Handwriting', cursive;
+    color: white;
+    font-size: 17px;
+    padding: 12px 30px;
+    border-radius: 25px; 
+    cursor: pointer;
+    border: 2px solid #fc6b0a;
+    background: transparent;
+    transition: all 0.3s ease; 
+     
+}
+.lasgidi-buttons button:hover {
+    background-color: #ffcc00; 
+    color: #000000
+}
+
+.lasgidi-buttons button:hover {
+    transform: scale(1.5); 
+}
+
+.lasgidi-footer .lasgidi-social a img {
+    height: 35px;   
+    width: auto;    
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.lasgidi-footer .lasgidi-social {
+    margin-left: 10px; }
+
+.lasgidi-footer .lasgidi-social a {
+    margin: 10px; 
+    display: inline-block;
+}
+
+.lasgidi-footer .lasgidi-social a:hover img {
+    transform: scale(2.0);
+    filter: brightness(2.0);
+}
+.footer-branding {
+    text-align: center;
+}
+
+.footer-branding p {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:12px;
+    color: whitesmoke; 
+    letter-spacing: 1px;
+}
+
+    @keyframes bounceText {
+    0%   { opacity: 0; transform: translateY(20px); }
+    50%  { opacity: 1; transform: translateY(-5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.lasgidi-text {
+    animation: bounceText 1.7s ease forwards;
+    animation-delay: 1s; 
+}
+
+@keyframes fadeInButtons {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.lasgidi-buttons button {
+    opacity: 0; 
+    animation: fadeInButtons 0.9s ease forwards;
+    animation-delay: 3s; 
+}
+
+@keyframes fadeinIcons {
+    0%   { opacity: 0; transform: translateY(0); }
+    50%  { opacity: 1; transform: translateY(-5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.lasgidi-footer .lasgidi-social a img {
+    opacity: 0; /* start hidden */
+    animation: fadeinIcons 2s infinite ease-in-out;
+    animation-delay: 2s;
+}

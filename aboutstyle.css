@@ -1,0 +1,229 @@
+/* GLOBAL */
+body {
+    font-family: 'Lucida Handwriting', cursive;
+    margin: 0;
+    padding: 0;
+    padding-top: 0px; /* prevents navbar overlap */
+    box-sizing: border-box;
+}
+
+/* ABOUT HEADER (Hero Section) */
+.about-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    height: 100vh;
+    padding: 0 50px;
+    text-align: center;
+    color: #f5e9e9;
+
+    background:
+        linear-gradient(#00000089, #00000099),
+        url("images/about lagos.png") center/cover no-repeat;
+}
+
+/* NAVBAR */
+.lasgidi-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000cc;
+    padding: 15px 50px 10px;
+    z-index: 1000;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.lasgidi-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.lasgidi-nav ul li {
+    margin-left: 60px;
+    transition: transform 0.3s ease;
+}
+
+.lasgidi-nav ul li:hover {
+    transform: scale(1.5);
+}
+
+.lasgidi-nav ul li a {
+    color: #f15208d8;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lasgidi-nav ul li a:hover {
+    color: #ffcc00;
+}
+
+
+@media (max-width: 768px) {
+    .lasgidi-nav {
+        padding: 15px 20px;
+    }
+
+    .lasgidi-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lasgidi-nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .lasgidi-nav ul li a {
+        font-size: 14px;
+    }
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+/* ABOUT MAIN SECTION */
+.about-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 120px 50px 50px; /* pushes below navbar */
+    color: #f8e2e2;
+}
+
+.about-text {
+    flex: 1;
+    font-family: lucida handwriting, cursive;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #00000066;
+}
+
+/* MOBILE ABOUT */
+@media (max-width: 900px) {
+    .about-layout {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .about-image {
+        margin-top: 30px;
+    }
+}
+
+/* BUTTONS */
+.lasgidi-buttons button {
+    font-family: 'Lucida Handwriting', cursive;
+    color: white;
+    font-size: 17px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid #fc6b0a;
+    background: transparent;
+
+    opacity: 0;
+    animation: fadeInButtons 0.8s ease forwards;
+    animation-delay: 2s;
+
+    transition: all 0.3s ease;
+}
+
+.lasgidi-buttons button:hover {
+    background-color: #ffcc00;
+    color: #000000;
+    transform: scale(1.2);
+}
+
+@keyframes fadeInButtons {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* FOOTER */
+.lasgidi-footer .lasgidi-social a img {
+    height: 35px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: fadeinIcons 2s ease-in-out;
+    animation-delay: 2s;
+}
+
+@keyframes fadeinIcons {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.lasgidi-footer .lasgidi-social {
+    margin-left: 10px;
+}
+lasgidi-footer .lasgidi-social a img {
+    height: 35px;   
+    width: auto;    
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.lasgidi-footer .lasgidi-social {
+    margin-left: 10px; }
+
+.lasgidi-footer .lasgidi-social a {
+    margin: 10px; 
+    display: inline-block;
+}
+
+.lasgidi-footer .lasgidi-social a:hover img {
+    transform: scale(2.0);
+    filter: brightness(2.0);
+}
+.footer-branding {
+    text-align: center;
+}
+
+.footer-branding p {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:12px;
+    color: whitesmoke; 
+    letter-spacing: 1px;
+}
+.lasgidi-footer {
+    width: 100%;
+    background-color: #030303; 
+    text-align: left;
+}
+
+.lasgidi-footer .lasgidi-social a {
+    text-decoration: none;
+    color: #f5721b; 
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 12px;
+    margin: 0 15px;
+}
+
+.lasgidi-footer .lasgidi-social a:hover {
+    color: #ffcc00; 
+}
